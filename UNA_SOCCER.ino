@@ -1,5 +1,4 @@
-//Robot Soccer
-//by anonymous
+
 #include <BluetoothSerial.h>
 
 BluetoothSerial SerialBT;
@@ -18,7 +17,7 @@ void setup() {
   pinMode(kanan_maju, OUTPUT);
   pinMode(ledPin, OUTPUT);
 
-  SerialBT.begin("ESP32_KML"); // Nama perangkat Bluetooth
+  SerialBT.begin("ESP32_KML"); 
   Serial.begin(9600); 
 
   digitalWrite(ledPin, HIGH);
@@ -39,7 +38,7 @@ void mundur() {
   digitalWrite(kiri_maju, LOW);
   digitalWrite(kanan_mundur, HIGH);
   digitalWrite(kanan_maju, LOW);
-  digitalWrite(ledPin, HIGH); // LED menyala saat mundur
+  digitalWrite(ledPin, HIGH); 
 }
 
 void kanan() {
@@ -47,7 +46,7 @@ void kanan() {
   digitalWrite(kiri_maju, HIGH);
   digitalWrite(kanan_mundur, LOW);
   digitalWrite(kanan_maju, LOW);
-  digitalWrite(ledPin, HIGH); // LED menyala saat berbelok kanan
+  digitalWrite(ledPin, HIGH); 
 }
 
 void kiri() {
@@ -55,7 +54,7 @@ void kiri() {
   digitalWrite(kiri_maju, LOW);
   digitalWrite(kanan_mundur, LOW);
   digitalWrite(kanan_maju, HIGH);
-  digitalWrite(ledPin, HIGH); // LED menyala saat berbelok kiri
+  digitalWrite(ledPin, HIGH); 
 }
 
 void berhenti() {
@@ -63,7 +62,7 @@ void berhenti() {
   digitalWrite(kiri_maju, LOW);
   digitalWrite(kanan_mundur, LOW);
   digitalWrite(kanan_maju, LOW);
-  digitalWrite(ledPin, LOW); // LED mati saat berhenti
+  digitalWrite(ledPin, LOW);
 }
 
 void loop() {
@@ -89,7 +88,7 @@ void loop() {
       berhenti();
       break;
     default:
-      // Tidak ada aksi untuk karakter lain
+      // 
       break;
   }
 }
